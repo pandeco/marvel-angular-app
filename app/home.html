@@ -2,6 +2,8 @@
 <html ng-app="marvel">
 
 <head>
+    <meta charset="UTF-8">
+
     <title>Marvel Heroes Catalog</title>
 
     <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico" />
@@ -10,13 +12,18 @@
     <link rel="stylesheet" type="text/css" href="assets/styles/bootstrap-theme.min.css" />
     <link rel="stylesheet" type="text/css" href="assets/styles/toaster.min.css" />
 
-    <script type="text/javascript" src="lib/angular.min.js"></script>
-    <script type="text/javascript" src="lib/bootstrap.min.js"></script>
+    <script type="text/javascript" src="lib/angular.js"></script>
+    <script type="text/javascript" src="lib/angular-route.js"></script>
     <script type="text/javascript" src="lib/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="lib/bootstrap.js"></script>
     <script type="text/javascript" src="lib/toaster.min.js"></script>
+    <script type="text/javascript" src="lib/ui-bootstrap-tpls-2.1.4.js"></script>
 
     <script type="text/javascript" src="app.js"></script>
     <script type="text/javascript" src="app.constants.js"></script>
+    <script type="text/javascript" src="app.routes.js"></script>
+    <script type="text/javascript" src="core/HomeController.js"></script>
+    <script type="text/javascript" src="core/heroes/HeroesController.js"></script>
 </head>
 
 <body ng-controller="HomeController as homeController">
@@ -35,7 +42,7 @@
 
         </div>
     </nav>
-    <ng-view></ng-view>
+    <div id="mainContent" ng-view=""></div>
 </body>
 
 </html>

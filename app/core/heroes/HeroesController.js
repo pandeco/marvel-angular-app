@@ -1,11 +1,11 @@
 (function(){
   'use strict';
 
-  angular.module('marvel.core').controller('HeroesController', HeroesController);
+  angular.module('marvel.core.heroes').controller('HeroesController', HeroesController);
 
-    HomeController.$inject = ['$scope'];
+    HeroesController.$inject = ['$scope', '$modal', '$location', '$filter',  'toaster'];
 
-    function HeroesController($scope) {
+    function HeroesController($scope, $modal, $location, $filter,  toaster) {
 
 
     }
