@@ -6,6 +6,6 @@
     angular.module('marvel.constants', []);
     angular.module('marvel.common', []);
     angular.module('marvel.core', []);
-    angular.module('marvel.core.heroes', []);
+    angular.module('marvel.core.characters', []);
 
 })();

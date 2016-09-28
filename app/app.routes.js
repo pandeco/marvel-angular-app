@@ -7,9 +7,9 @@
 				templateUrl: "home.html",
 				controller : "HomeController"
 			})
-			.when('/heroes', {
-				templateUrl: "core/heroes/heroes.html",
-				controller : "HeroesController"
+			.when('/characters', {
+				templateUrl: "core/characters/characters.html",
+				controller : "CharactersController"
 			})
 
 			.otherwise('/', {
