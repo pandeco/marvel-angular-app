@@ -1,11 +1,26 @@
 <div class="container">
     <div class="modal-header">
         <h1>Heroes</h1>
+        <form ng-submit="searchCharacter()">
+            <legend>Buscar Personagem</legend>
+            <div class="row">
+                <div class="col-sm-10">
+                    <div class="row">
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" placeholder="Nome do personagem..." ng-model="name" required>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <button type="submit" class="btn btn-lg btn-block btn-primary">Buscar</button>
+                </div>
+            </div>
+        </form>
     </div>
-    <div class="modal-body">
-        teste
-    </div>
-    <div class="modal-footer">
-        rodape
+    <div ng-repeat="character in characters">
+        {{chacarter.name}}
+        <div class="modal-footer">
+            rodape
+        </div>
     </div>
 </div>
