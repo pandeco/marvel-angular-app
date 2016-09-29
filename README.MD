@@ -31,3 +31,4 @@ Protractor          | Last    | Protractor is an end-to-end test framework for A
 2. Install gulp *(npm install gulp)*
 3. Install gulp-cli *(npm install -g gulp-cli)*
 4. Install gulp-webserver *(npm install gulp-webserver)*
+5. Para iniciar servidor, usar comando 'gulp webserver'
