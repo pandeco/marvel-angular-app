@@ -2,7 +2,7 @@
 <html ng-app="marvel">
 
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
 
     <title>Marvel Heroes Catalog</title>
 
@@ -14,16 +14,19 @@
 
     <script type="text/javascript" src="lib/angular.js"></script>
     <script type="text/javascript" src="lib/angular-route.js"></script>
+    <script type="text/javascript" src="lib/ui-bootstrap-tpls-2.1.4.js"></script>
     <script type="text/javascript" src="lib/jquery-3.1.1.min.js"></script>
     <script type="text/javascript" src="lib/bootstrap.js"></script>
     <script type="text/javascript" src="lib/toaster.min.js"></script>
-    <script type="text/javascript" src="lib/ui-bootstrap-tpls-2.1.4.js"></script>
+    <script type="text/javascript" src="lib/md5.js"></script>
 
     <script type="text/javascript" src="app.js"></script>
     <script type="text/javascript" src="app.constants.js"></script>
     <script type="text/javascript" src="app.routes.js"></script>
+    <script type="text/javascript" src="common/services/RESTServiceManager.js"></script>
     <script type="text/javascript" src="core/HomeController.js"></script>
-    <script type="text/javascript" src="core/characters/CharactersController.js"></script>
+    <script type="text/javascript" src="core/characters/CharacterServices.js"></script>
+    <script type="text/javascript" src="core/characters/CharacterController.js"></script>
 </head>
 
 <body ng-controller="HomeController as homeController">

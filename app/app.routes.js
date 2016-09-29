@@ -9,7 +9,7 @@
 			})
 			.when('/characters', {
 				templateUrl: "core/characters/characters.html",
-				controller : "CharactersController"
+				controller : "CharacterController"
 			})
 
 			.otherwise('/', {

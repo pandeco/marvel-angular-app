@@ -1,26 +1,20 @@
-<div class="container">
-    <div class="modal-header">
-        <h1>Heroes</h1>
-        <form ng-submit="searchCharacter()">
-            <legend>Buscar Personagem</legend>
-            <div class="row">
-                <div class="col-sm-10">
-                    <div class="row">
-                        <div class="col-sm-10">
-                            <input type="text" class="form-control" placeholder="Nome do personagem..." ng-model="name" required>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-2">
-                    <button type="submit" class="btn btn-lg btn-block btn-primary">Buscar</button>
-                </div>
-            </div>
+
+<div class="row marvel" style="width: 800px">
+    <div id="form-control" class="col-xs-12 form-area" style="margin: 5px">
+        <form ng-submit="processForm()">
+            <input type="text" class="col-xs-8 form-control" style="width: 70%; height: 46px" placeholder="Character Name" ng-model="formData.name" required>
+            <button type="submit" class="col-xs-2 go-btn btn btn-lg btn-success">Search</button>
         </form>
     </div>
-    <div ng-repeat="character in characters">
-        {{chacarter.name}}
-        <div class="modal-footer">
-            rodape
+    <div ng-repeat="character in characters"  style="margin: 5px">
+        <div class="col-md-4 col-md-8">
+          <img ng-src="{{character.img}}" style="max-width: 200px; height: auto;" />
+          <div>
+            <h4>Name:</h4>
+            <p>{{ character.name }}</p>
+            <h4>Description:</h4>
+            <p>{{ character.desc }}</p>
+          </div>
         </div>
     </div>
 </div>
