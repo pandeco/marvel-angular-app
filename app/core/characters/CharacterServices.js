@@ -10,5 +10,9 @@
         this.getCharacterByName = function(name) {
             return RESTServiceManager.performRequest('characters?nameStartsWith=' + name);
         };
+
+        this.getComicsById = function(id) {
+            return RESTServiceManager.performRequest('characters/' + id + '/comics?orderBy=onsaleDate');
+        };
     }
 })();

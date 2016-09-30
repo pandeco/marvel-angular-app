@@ -7,7 +7,7 @@
 
             var timestamp = new Date().getTime();
             var privateKey = '9fe5d5ebc2b703bed35245a5aca1f6d6d73307ff';
-            var hash = this.getHash(timestamp, privateKey);
+            var hash = this.getHash(timestamp, privateKey); debugger
             var result = API_URL + api + '&ts=' + timestamp + '&apikey=' + API_KEY + '&hash=' + hash;
             return result;
         };

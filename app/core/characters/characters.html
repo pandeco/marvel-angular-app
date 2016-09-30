@@ -1,20 +1,42 @@
-
 <div class="row marvel" style="width: 800px">
     <div id="form-control" class="col-xs-12 form-area" style="margin: 5px">
         <form ng-submit="processForm()">
-            <input type="text" class="col-xs-8 form-control" style="width: 70%; height: 46px" placeholder="Character Name" ng-model="formData.name" required>
-            <button type="submit" class="col-xs-2 go-btn btn btn-lg btn-success">Search</button>
+            <input type="text" class="col-xs-8 form-control" style="width: 70%; height: 46px" placeholder="Nome do personagem..." ng-model="formData.name" required>
+            <button type="submit" class="col-xs-2 go-btn btn btn-lg btn-success">Pesquisar</button>
         </form>
     </div>
-    <div ng-repeat="character in characters"  style="margin: 5px">
+    <div ng-repeat="character in characters | orderBy:'name'" style="margin: 5px">
         <div class="col-md-4 col-md-8">
-          <img ng-src="{{character.img}}" style="max-width: 200px; height: auto;" />
-          <div>
-            <h4>Name:</h4>
-            <p>{{ character.name }}</p>
-            <h4>Description:</h4>
-            <p>{{ character.desc }}</p>
-          </div>
+            <img ng-src="{{character.img}}" style="max-width: 200px; height: auto;" />
+            <div>
+                <h4>Name:</h4>
+                <p>{{ character.name }}</p>
+                <h4>Description:</h4>
+                <p>{{ character.desc }}</p>
+                <p>
+                    <form ng-submit="getComics(character.id)">
+                        <button type="submit" class="btn btn-success" data-toggle="modal" data-target="#myModal">ver comics</button>
+                    </form>
+                </p>
+            </div>
+        </div>
+
+
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document" ng-repeat="comic in comics">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <h4 class="modal-title" id="myModalLabel">{{comic.title}}</h4>
+                    </div>
+                    <div class="modal-body">
+                        texto
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
